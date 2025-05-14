@@ -9,6 +9,12 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- fonts from google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+
   <title>Metronome</title>
 </head>
 <body>
@@ -20,26 +26,27 @@
       </div>
       <div class="volslider">
         <!-- VOLUME SLIDER -->
-        <input type="range" id="volume-slider">
+        <input type="range" class="slider" id="volume-slider">
       </div>
       <div class="upcorner">
         <!-- TODO: add links to <a/> -->
-        <a href="" class="fa-brands fa-github" style="font-size:24px; text-decoration: none; color: inherit;" target="_blank"></a>
+        <a href="https://github.com/Gazzana/metronome.git" class="fa-brands fa-github" style="font-size:24px; text-decoration: none; color: inherit;" target="_blank"></a>
         <a href="" class="fa-solid fa-share-nodes" style="font-size:24px; text-decoration: none; color: inherit" target="_blank"></a>
       </div>
     </header>
 
     <div class="subbox">
       <div>
+        <div class="controls">
 
-        <input type="text" class="editable-text" id="bpm-show" value="BPM">
-
-        <!-- TODO: pause/resume button change icon in page.js -->
-        <button id="play-pause-btn" class="icon-btn">
-          <i class="fas fa-pause"></i> <!-- Ícone inicial -->
-        </button> 
+          <input type="text" class="editable-text" id="bpm-show" value="BPM">
+          
+          <button id="play-pause-btn" class="icon-btn">
+            <i class="fas fa-play"></i> <!-- initial icon -->
+          </button> 
+        </div>
       </div>
-      <input type="range" id="bpm-slider">
+      <input type="range" class="slider" value="120" min="40" max="300" id="bpm-slider">
     </div>
     
   </div>
